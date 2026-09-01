@@ -58,10 +58,8 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
 | :--- | :--- |
 | **Enclosure** | Stock Philips AJ1000/12 Shell |
 | **Microcontroller** | ESP32-S3-Zero |
-| **Display** | 2.7" SSD1363 OLED (256x128, 7-pin SPI) |
+| [**Display**](https://it.aliexpress.com/item/1005006783438037.html) | 2.7" SSD1363 OLED (256x128, 7-pin SPI) |
 | **Light Sensor** | VEML7700 (I2C) |
-
-* **OLED Display:** 2.7" SSD1363 OLED 256x128 7-PIN SPI - [AliExpress](https://it.aliexpress.com/item/1005006783438037.html)
 
 ---
 
