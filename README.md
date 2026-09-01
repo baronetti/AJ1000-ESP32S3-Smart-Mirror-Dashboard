@@ -16,7 +16,7 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
 * **Header Bar:** Italian date, external temperature (`°C`), and vector weather icons matching Home Assistant MQTT sensors.
 * **Smart Dimming:** Hardware VEML7700 light sensor with low-pass hysteresis filtering (~0.8s reaction) for glass penetration.
 * **Fluid Digit Transitions:** Day-by-day dynamic animations (Vertical Slide, GlitchShift, 3D Split-Flip, Dust Dissolve, Dithered CrossFade, Wave Scan) with fixed slot positions to prevent screen jitter.
-* **OTA**
+* **OTA Updates**
 * **Last Will and Testament MQTT Message**: Useful, especially if you have an uptime checker with Telegram notifications (I use Uptime Kuma on HA).
 
 ## Ongoing development (Target: v1.0.0):
