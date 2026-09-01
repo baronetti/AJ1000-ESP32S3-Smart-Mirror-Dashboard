@@ -61,6 +61,8 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
 | **Display** | 2.7" SSD1363 OLED (256x128, 7-pin SPI) |
 | **Light Sensor** | VEML7700 (I2C) |
 
+![OLED Screen](https://it.aliexpress.com/item/1005006783438037.html)
+
 ---
 
 ## Wiring Diagram
