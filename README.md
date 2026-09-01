@@ -45,10 +45,10 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
   <img src="assets/original_clock.jpg" width="150" alt="Original Philips AJ1000" title="Original Clock">
   <img src="assets/opened_clock.jpg" width="150" alt="Opened Enclosure" title="Opened Shell">
   <img src="assets/disassembled_parts.jpg" width="150" alt="Disassembled Parts" title="Teardown & Removed Parts">
-  <img src="assets/breadboard_prototype.jpg" width="150" alt="Breadboard Prototype" title="Breadboard Testing">
   <img src="assets/mirror_screen.jpg" width="150" alt="Mirror Screen Test" title="Testing Behind One-Way Mirror">
+  <img src="assets/breadboard_prototype.jpg" width="150" alt="Breadboard Prototype" title="Breadboard Testing">
 </p>
-<p align="center"><em>From left to right: Stock device, opening the shell, internal teardown, breadboard prototyping, and mirror glass test</em></p>
+<p align="center"><em>From left to right: Stock device, opening the shell, internal teardown, mirror glass test, and breadboard prototyping</em></p>
 
 ---
 
