@@ -51,7 +51,7 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
   <img src="assets/mirror_screen.jpg" width="150" alt="Mirror Screen Test" title="Testing Behind One-Way Mirror">
   <img src="assets/breadboard_prototype.jpg" width="150" alt="Breadboard Prototype" title="Breadboard Testing">
   <img src="assets/now_playing.jpg" width="150" alt="Finished "Now Playing" dashboard" title="Finished "Now Playing" dashboard">
-  <img src="assets/digits_transition.gif" width="150" alt="Digits Transition Animation" title="Digits Transition">
+  <img src="assets/transition_example.gif" width="150" alt="Digits Transition Animation" title="Digits Transition">
 </p>
 <p align="center"><em>From left to right: Stock device, opening the shell, internal teardown, mirror glass test, breadboard prototyping, "Now playing" dashboard and an example of digits transition.</em></p>
 
