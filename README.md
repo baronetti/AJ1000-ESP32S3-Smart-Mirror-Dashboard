@@ -1,6 +1,6 @@
 # Philips AJ1000 ESP32-S3 Smart Mirror Dashboard
 
-![Release](https://img.shields.io/badge/version-0.1.0-blue.svg)
+![Release](https://img.shields.io/badge/version-0.2.0-blue.svg)
 ![Microcontroller](https://img.shields.io/badge/ESP32--S3-Zero-red.svg)
 ![Integration](https://img.shields.io/badge/Home%20Assistant-MQTT-green.svg)
 
@@ -10,20 +10,23 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
 
 ---
 
-## Current State (v0.1.0)
+## Current State (v0.2.0)
 
 * **Main Clock View:** High-density 92px vertical font for time (`HH:MM`).
 * **Header Bar:** Italian date, external temperature (`°C`), and vector weather icons matching Home Assistant MQTT sensors.
 * **Smart Dimming:** Hardware VEML7700 light sensor with low-pass hysteresis filtering (~0.8s reaction) for glass penetration.
 * **Fluid Digit Transitions:** Day-by-day dynamic animations (Vertical Slide, GlitchShift, 3D Split-Flip, Dust Dissolve, Dithered CrossFade, Wave Scan) with fixed slot positions to prevent screen jitter.
 * **OTA Updates**
-* **Last Will and Testament MQTT Message**: Useful, especially if you have an uptime checker with Telegram notifications (I use Uptime Kuma on HA).
+* **LWT MQTT Message**: Useful, especially if you have an uptime checker with Telegram notifications (I use Uptime Kuma on HA).
+* **HA Interactive Screens:**
+  - "Now Playing" media control view with song cover, title, artist, album name, playlist name, source volume and a progresss bar with timestamps.
+* **Boot Animations:** Day-by-day dynamic animations (bootCRTExpand, bootMatrixLock, bootSequentialDrop).
+* **Fallbacks:** In case of Wi-Fi signal/MQTT connection/sensors response... loss.
 
 ## Ongoing development (Target: v1.0.0):
 * **MQTT Offline Fallback:** Graceful fallback to standalone NTP clock display when Home Assistant is unreachable.
 * **HA Interactive Screens:**
   - Detailed Weather forecast screen.
-  - "Now Playing" media control view.
   - Home Statistics Gauges (Power consumption, Temp/Humidity, Internet speed...).
   - Mail & Calendar summary.
   - Intercom & Doorbell notifications.
@@ -32,7 +35,7 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
   - Memos, notes...
 * **Navigation:** Physical buttons with water-ripple transition animations (Left/Right swipe).
 * **Smart Sleep & Wake Rules:**
-  - Auto-sleep after 22:00 if room is dark for > 7 minutes or on button press.
+  - Auto-sleep after 10 PM if room is dark for > 7 minutes or on button press.
   - Auto-wake on light detection (>2 min), window opened event (HA), or button press.
 * **No Distraction Mode:** 5-hour DND triggered by long-pressing both buttons.
 * **Android App Control**
@@ -47,8 +50,10 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
   <img src="assets/disassembled_parts.jpg" width="150" alt="Disassembled Parts" title="Teardown & Removed Parts">
   <img src="assets/mirror_screen.jpg" width="150" alt="Mirror Screen Test" title="Testing Behind One-Way Mirror">
   <img src="assets/breadboard_prototype.jpg" width="150" alt="Breadboard Prototype" title="Breadboard Testing">
+  <img src="assets/now_playing.jpg" width="150" alt="Finished "Now Playing" dashboard" title="Finished "Now Playing" dashboard">
+  <img src="assets/digits_transition.gif" width="150" alt="Digits Transition Animation" title="Digits Transition">
 </p>
-<p align="center"><em>From left to right: Stock device, opening the shell, internal teardown, mirror glass test, and breadboard prototyping</em></p>
+<p align="center"><em>From left to right: Stock device, opening the shell, internal teardown, mirror glass test, breadboard prototyping, "Now playing" dashboard and an example of digits transition.</em></p>
 
 ---
 
