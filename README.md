@@ -12,33 +12,32 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
 
 ## Current State (v0.2.0)
 
-* **Main Clock View:** High-density 92px vertical font for time (`HH:MM`).
-* **Header Bar:** Italian date, external temperature (`°C`), and vector weather icons matching Home Assistant MQTT sensors.
-* **Smart Dimming:** Hardware VEML7700 light sensor with low-pass hysteresis filtering (~0.8s reaction) for glass penetration.
+* **Main Clock View:** High-density 92px vertical font for time display (`HH:MM`).
+* **Header Bar:** Italian date format, external temperature (`°C`), and vector weather icons matching Home Assistant MQTT sensors.
+* **Smart Dimming:** Hardware VEML7700 light sensor with low-pass hysteresis filtering (~0.8s reaction) for optical glass penetration.
 * **Fluid Digit Transitions:** Day-by-day dynamic animations (Vertical Slide, GlitchShift, 3D Split-Flip, Dust Dissolve, Dithered CrossFade, Wave Scan) with fixed slot positions to prevent screen jitter.
-* **OTA Updates**
-* **LWT MQTT Message**: Useful, especially if you have an uptime checker with Telegram notifications (I use Uptime Kuma on HA).
-* **HA Interactive Screens:**
-  - "Now Playing" media control view with song cover, title, artist, album name, playlist name, source volume and a progresss bar with timestamps.
-* **Boot Animations:** Day-by-day dynamic animations (bootCRTExpand, bootMatrixLock, bootSequentialDrop).
-* **Fallbacks:** In case of Wi-Fi signal/MQTT connection/sensors response... loss.
+* **Boot Animations:** Custom startup animations (CRT Expand, Matrix Lock, Sequential Drop).
+* **HA Interactive Screens:** * "Now Playing" media dashboard with album cover, track title, artist, album name, playlist, volume level, and a dynamic progress bar with timestamps.
+* **MQTT LWT (Last Will and Testament):** Publishes availability status for network uptime monitoring (e.g., Uptime Kuma integration).
+* **OTA Updates:** Over-the-air firmware flashing support.
+* **Robust Fallbacks:** Graceful standalone UI handling during Wi-Fi drops, MQTT disconnections, or sensor read timeouts.
 
-## Ongoing development (Target: v1.0.0):
-* **MQTT Offline Fallback:** Graceful fallback to standalone NTP clock display when Home Assistant is unreachable.
+## Ongoing Development (Target: v1.0.0)
+
 * **HA Interactive Screens:**
-  - Detailed Weather forecast screen.
-  - Home Statistics Gauges (Power consumption, Temp/Humidity, Internet speed...).
-  - Mail & Calendar summary.
-  - Intercom & Doorbell notifications.
-  - DSC Alarm panel status.
-  - Alexa requests visual sync.
-  - Memos, notes...
+  * Detailed Weather forecast view.
+  * Home Statistics Gauges (Power consumption, Temp/Humidity, Internet speed).
+  * Mail & Calendar summary.
+  * Intercom & Doorbell live notifications.
+  * DSC Alarm panel integration.
+  * Visual synchronization for Alexa requests.
+  * Memos and quick notes.
 * **Navigation:** Physical buttons with water-ripple transition animations (Left/Right swipe).
 * **Smart Sleep & Wake Rules:**
-  - Auto-sleep after 10 PM if room is dark for > 7 minutes or on button press.
-  - Auto-wake on light detection (>2 min), window opened event (HA), or button press.
-* **No Distraction Mode:** 5-hour DND triggered by long-pressing both buttons.
-* **Android App Control**
+  * Auto-sleep after 10:00 PM if the room remains dark for > 7 minutes, or via button press.
+  * Auto-wake upon light detection (>2 min), window sensor event (HA), or button press.
+* **No Distraction Mode:** 5-hour Do-Not-Disturb (DND) mode triggered by long-pressing both buttons.
+* **Android App Control:** Mobile remote management via a dedicated app.
 
 ---
 
@@ -50,10 +49,10 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
   <img src="assets/disassembled_parts.jpg" width="150" alt="Disassembled Parts" title="Teardown & Removed Parts">
   <img src="assets/mirror_screen.jpg" width="150" alt="Mirror Screen Test" title="Testing Behind One-Way Mirror">
   <img src="assets/breadboard_prototype.jpg" width="150" alt="Breadboard Prototype" title="Breadboard Testing">
-  <img src="assets/now_playing.jpg" width="150" alt="Finished "Now Playing" dashboard" title="Finished "Now Playing" dashboard">
+  <img src="assets/now_playing.jpg" width="150" alt="Finished 'Now Playing' dashboard" title="Finished 'Now Playing' dashboard">
   <img src="assets/transition_example.gif" width="150" alt="Digits Transition Animation" title="Digits Transition">
 </p>
-<p align="center"><em>From left to right: Stock device, opening the shell, internal teardown, mirror glass test, breadboard prototyping, "Now playing" dashboard and an example of digits transition.</em></p>
+<p align="center"><em>From left to right: Stock device, opening the shell, internal teardown, mirror glass testing, breadboard prototyping, 'Now Playing' dashboard, and digit transition animation example.</em></p>
 
 ---
 
@@ -71,7 +70,7 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
 ## Wiring Diagram
 
 ![Wiring Diagram](assets/wiring_diagram_noButtons.png)
-> **Note:** Initial prototype scheme (button pins omitted in v0.1.0).
+> **Note:** Initial prototype schematic.
 
 ---
 
@@ -83,4 +82,4 @@ It uses a 2.7" SSD1363 OLED display (256x128 resolution) mounted behind the orig
    * `Adafruit_VEML7700`
    * `PubSubClient` by Nick O'Leary
 3. Follow the instructions present in the .ino to edit the placeholders.
-4. Upload onto the board
+4. Select your **ESP32-S3** board target and upload the sketch.
